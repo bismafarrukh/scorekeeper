@@ -29,14 +29,20 @@ reset.addEventListener('click',function(){
     score1.innerHTML=0;
     score2.innerHTML=0;
     winner.innerHTML="";
+     score1.style.color="#694569";
+     score2.style.color="#694569";
    
 })
 
 fin.addEventListener('click',function(){
     if (player1Score>player2Score){
         winner.innerHTML="Player 1 is the winner."
+        score1.style.color="green";
+        score2.style.color="red";
     }else if (player1Score<player2Score){
         winner.innerHTML="Player 2 is the winner."
+        score2.style.color="green";
+        score1.style.color="red";
     }else if(player1Score==0 && player2Score==0){
         winner.innerHTML="Use player buttons to record score."
     }else{
